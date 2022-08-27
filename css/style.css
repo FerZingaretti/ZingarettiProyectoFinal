@@ -1,23 +1,34 @@
-*{
+/* mobile last */
+/* paleta de colores (ver) */
+
+* {
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
-.header{
+
+.header {
     background-color: rgba(31, 147, 155, 0.959);
     padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
+
 }
-a{
-   text-decoration: none;
+
+a {
+    text-decoration: none;
     list-style-type: none;
     color: aliceblue;
     font-size: medium;
 }
-.footer{
-    background-color: rgb(31, 136, 142);
+
+.header a:hover {
+    color: rgb(52, 96, 81);
+}
+
+.footer {
+    background-color: #1f888e;
     border-color: black;
     padding: 20px;
     font-style: italic;
@@ -25,41 +36,52 @@ a{
     position: relative;
     bottom: 230px;
 }
-  
+.footer a:hover{
+    color: rgb(52, 96, 81);
+}
+.footer ul{
+    text-decoration: none;
+    list-style-type: none;
+    color: aliceblue;
+    font-size: medium;
+}
+
 /* titulo de imagen central de todas las paginas*/
-.titulo{
+
+.titulo {
     font-family: ‘Trebuchet MS’, ‘Lucida Sans Unicode’, ‘Lucida Grande’, ‘Lucida Sans’, Arial, sans-serif;
 
     font-size: xxx-large;
-    
+
     font-weight: bold;
-    
+
     color: aliceblue;
-    
+
     background-color: #0000004f;
-    
+
     padding-left: 20px;
-    
+
     text-align: center;
 
     position: relative;
     top: 40px;
 
- }
- .section1 img{
+}
+
+.section1 img {
     width: 100%;
 
-position: relative;
+    position: relative;
 
-bottom: 50px;
+    bottom: 50px;
 
-z-index: -2;
+    z-index: -2;
 
 }
 
 /* parrafos index y Nosotros */
 
-.overflow1{
+.overflow1 {
     background-color: aliceblue;
     border-left: 4px solid lightseagreen;
     border-top: 4px solid lightseagreen;
@@ -72,9 +94,10 @@ z-index: -2;
     padding: 15px;
     font-family: 'Times New Roman', Times, serif, sans-serif;
     text-align: center;
-  
+
 }
-.overflow2{
+
+.overflow2 {
     background-color: aliceblue;
     border-right: 4px solid lightseagreen;
     border-top: 4px solid lightseagreen;
@@ -87,41 +110,47 @@ z-index: -2;
     padding: 15px;
     font-family: 'Times New Roman', Times, serif, sans-serif;
     text-align: center;
-  
+
 }
-.menu{
+
+.menu {
     display: inline-block;
     margin: 5px;
 
-  
-  
-}
-.menu li{
-    display: inline-block;
-    padding: 5px;
-   
+
+
 }
 
-.section2{
+.menu li {
+    display: inline-block;
+    padding: 5px;
+
+}
+
+.section2 {
     display: flex;
     z-index: -1;
     position: relative;
     bottom: 150px;
 }
-.section2 img{
+
+.section2 img {
     width: 50%;
-    
+
 }
-.section3{
+
+.section3 {
     display: flex;
     z-index: -1;
     position: relative;
     bottom: 250px;
 }
-.section3 img{
+
+.section3 img {
     width: 50%;
 }
-.imagen{
+
+.imagen {
     width: 100%;
     position: relative;
     top: -50px;
@@ -129,31 +158,186 @@ z-index: -2;
 }
 
 /* titulo de imagenes de index */
-.title2{
-  
+.title2 {
+
     background-color: rgba(32, 178, 171, 0.408);
     z-index: 500px;
-       color: rgb(71, 77, 98);
-    text-align: center;
+    color: rgb(71, 77, 98);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 100px;
+    font-size: 80px;
 }
-.alineacion1{
+
+.alineacion1 {
     text-align: right;
     position: relative;
     top: 450px;
 }
-.alineacion2{
+
+.alineacion2 {
     text-align: left;
     position: relative;
     top: 350px;
 }
 
 /* texto Nosotros */
-.textComplete{
+.textComplete {
     width: 95%;
+    margin-top: 0px;
 }
-.footerBajo{
-   position: relative;
-   bottom: 0px;
+
+.footerBajo {
+    position: relative;
+    bottom: 0px;
 }
+
+.sectionTendencias{
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(32, 105, 148);
+    font-size: x-large;
+}
+
+.sectionTendencias li{
+    padding: 10px;
+    font-weight: 100;
+    margin-left: 30px;
+}
+
+
+.formulario{
+    background-color: #1f888e;
+    padding: 40px;
+}
+.imput{
+    display: block;
+    position: relative;
+    left: 25%;
+    height: 40px;
+    width: 50%;
+}
+
+/* Galeria  de productos*/
+
+.container {  
+    display: grid;
+    margin: 0% auto;
+    max-width: 900px;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0fr 0fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      "img1 img2 img3";
+  }
+
+  .container img{
+    
+    width: 300px;
+  }
+  
+  .img1 { grid-area: img1;
+   margin: 10px;
+ }
+  
+  .img2 { grid-area: img2; 
+    margin: 5px;
+}
+  
+  .img3 { grid-area: img3; 
+    margin: 10px;
+}
+  
+  
+
+
+
+
+/* responsive */
+/* query de galeria */
+@media (max-width: 950px){
+    .container{
+        margin: 0% auto;
+        grid-template-columns:  1fr 0fr 0fr; ;
+        grid-template-rows:  0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+        "img1"
+        "img2"
+        "img3"
+    }
+
+}
+
+/* query index y otros */
+@media (max-width: 781px) {
+    .header {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    
+    a{
+        font-size: small;
+    }
+    .section2 {
+        display: block;
+    }
+
+    .section2 img {
+       
+        width: 100%;
+    }
+
+    .title2 {
+
+        color: rgb(216, 222, 244);
+        font-size: 60px;
+        text-align: center;
+    }
+    
+    .section3{
+        display: block;
+
+    }
+
+    .section3 img {
+       
+        width: 100%;
+    }
+
+    .overflow1 {
+        width: 100%;
+        margin: 0%;
+        margin-top: 20px;
+    }
+
+    .overflow2 {
+        width: 100%;
+        margin: 0%;
+        margin-top: 20px;
+    }
+
+    .alineacion1 {
+        text-align: center;
+        position: relative;
+        top: 250px;
+    }
+
+    .alineacion2 {
+        text-align: center;
+        position: relative;
+        top: 720px;
+    }
+    .section1 img {
+        margin-bottom: 30px;
+    }
+    .imput{
+     
+        left: 10%;
+        height: 40px;
+        width: 80%;
+    }
+   }
