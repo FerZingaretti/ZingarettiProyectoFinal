@@ -5,6 +5,7 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+  
 }
 
 .header {
@@ -160,7 +161,7 @@ a {
 .imagen {
     width: 100%;
     position: relative;
-    top: -50px;
+    top: -60px;
     z-index: -2;
 }
 
@@ -214,7 +215,11 @@ a {
 
 .formulario{
     background-color: #1f888e;
-    padding: 40px;
+    padding: 100px 200px;
+}
+.text-center{
+    font-size: larger;
+   
 }
 .imput{
     display: block;
@@ -222,6 +227,10 @@ a {
     left: 25%;
     height: 40px;
     width: 50%;
+}
+
+.imput:focus{
+    background-color: rgb(123, 221, 189);
 }
 
 /* Galeria  de productos*/
