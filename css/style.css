@@ -291,6 +291,10 @@ a {
     justify-content: space-around;
 }
 
+.changeImg img:hover{
+    filter:grayscale(2);
+    }
+
 
 
 /* responsive */
